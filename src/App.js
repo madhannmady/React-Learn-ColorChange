@@ -10,7 +10,6 @@ const App = () => {
 
   const handleChange = (e) => {
     setColor(e.target.value);
-    // console.log(color);
   };
 
   return (
