@@ -1,3 +1,7 @@
+# Color Changer 
+
+A simple project, developed in the aim to learn concepts of React library
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
