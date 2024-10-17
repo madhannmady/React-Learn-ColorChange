@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Mainbox from "./components/Mainbox";
+import Getcolor from "./components/Getcolor";
+import Toggle from "./components/Toggle";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [color, setColor] = useState("");
+  const [isDarkText, setIsDarkText] = useState(true);
+
+  const handleChange = (e) => {
+    setColor(e.target.value);
+    // console.log(color);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="container">
+      <Mainbox color={color} isDarkText={isDarkText} />
+      <Getcolor handleChange={handleChange} color={color} />
+      <Toggle setIsDarkText={setIsDarkText} isDarkText={isDarkText} />
     </div>
   );
-}
+};
 
 export default App;
